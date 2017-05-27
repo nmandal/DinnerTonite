@@ -20,7 +20,9 @@ var commentRoutes    = require("./routes/comments"),
     restaurantRoutes = require("./routes/restaurants"),
     indexRoutes      = require("./routes/auth")
     
-mongoose.connect("mongodb://localhost/dinnertonite");
+//mongoose.connect("mongodb://localhost/dinnertonite");
+mongoose.connect("mongodb://nick:zaqwsx33@ds155191.mlab.com:55191/dinnertonite");
+// mongodb://nick:zaqwsx33@ds155191.mlab.com:55191/dinnertonite
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
