@@ -19,17 +19,15 @@ require('dotenv').load();
 var commentRoutes    = require("./routes/comments"),
     restaurantRoutes = require("./routes/restaurants"),
     indexRoutes      = require("./routes/auth")
-    
 
-mongoose.connect("process.env.DATABASEURL");
-//mongoose.connect("mongodb://nick:zaqwsx33@ds155191.mlab.com:55191/dinnertonite");
+var url = process.env.DATABASEURL || "mongodb://localhost/dinnertonite"
+mongoose.connect(url);
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride('_method'));
 app.use(cookieParser('secret'));
-//require moment
 app.locals.moment = require('moment');
 // seedDB(); //seed the database
 
