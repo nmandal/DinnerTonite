@@ -63,5 +63,5 @@ app.listen(process.env.PORT, process.env.IP, function(){
 
 var http = require("http");
 setInterval(function() {
-	http.get("http://dinnertonite.herokuapp.com");
+	https.get("https://dinnertonite.herokuapp.com");
 }, 300000); // every 5 minutes
