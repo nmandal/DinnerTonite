@@ -61,7 +61,3 @@ app.listen(process.env.PORT, process.env.IP, function(){
    console.log("The DinnerTonite Server Has Started!");
 });
 
-var http = require("http");
-setInterval(function() {
-	https.get("https://dinnertonite.herokuapp.com");
-}, 300000); // every 5 minutes
